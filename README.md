@@ -406,13 +406,13 @@ The solver generates:
 Here is an example plot of computed wavefunctions overlaid with the potential $V(x)$ and energy levels $E_n$ using the above "Example Valid Input":
 
 ### 1. Wavefunctions overlaid with Potential and Energy Levels
-![Wavefunctions](wavefunctions.png)
+![Wavefunctions](TEST/wavefunctions.png)
 
 ### 2. Probability Densities overlaid with Potential and Energy Levels
-![Probability Densities](probability_densities.png)
+![Probability Densities](TEST/probability_densities.png)
 
 ### 3. Raw Wavefunctions (Unscaled)
-![Raw Wavefunctions](raw_wavefunctions.png)
+![Raw Wavefunctions](TEST/raw_wavefunctions.png)
 
 
 ## Running the Code
