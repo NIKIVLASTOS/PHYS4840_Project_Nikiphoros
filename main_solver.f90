@@ -81,7 +81,7 @@ program main_solver                                                          ! S
     if (i < Nx)    H(i,i+1) = -0.5d0/dx**2                                   ! Upper diagonal
   end do
 
-  ! === Save Hamiltonian I PUT THIS IN FOR DEBBUGING ===
+  ! === Save Hamiltonian I PUT THIS IN FOR DEBBUGING BUT HAVE LEFT SO USERS CAN SEE IT IF THEY WANT TO ===
   open(88, file='H_sample.txt')                                              ! Write small sample of H to file
   do i = 1, min(Nx, 10)
     write(88, '(10f10.5)') H(i,1:min(Nx,10))                                  ! Write a small matrix block
