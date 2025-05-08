@@ -215,7 +215,7 @@ This is the main driver program for solving the **one-dimensional time-independe
 This program serves as the computational 'backbone' of the solver, linking together all physical modeling and numerical components into a single executable workflow.
 ### `plot_results.py`
 
-This Python script visualizes the numerical results computed by the Fortran solver. It reads the output files (`xgrid.txt`, `eigenvalues.txt`, and `wavefunctions.txt`) and produces plots of the wavefunctions, probability densities, and input potential. All plots are saved in a `plots/` directory.
+This Python script visualizes the numerical results computed by the Fortran solver. It reads the output files (`xgrid.txt`, `eigenvalues.txt`, and `wavefunctions.txt`) and produces plots of the wavefunctions, probability densities, and input potential. All plots are saved in a `plots/` directory. Energy values of the wavefunctions are spread out artificially in this file to make it so the user can see the individual wave functions clearer. This can be seen in line 34 of the code for the harmonic oscillator (currently set at a scaling factor of 100) and lines 88-91 (currently set at a value of 15) for all other potential functions.
 
 #### Responsibilities:
 
