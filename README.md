@@ -352,8 +352,8 @@ The current version expects `input.txt` to follow a strict format (comment lines
   - Positive integer
   - Must be ≥ 100 (recommended: ≥ 500 for accurate results)
   - Increaseing Nx will increase computation time
-  - Minimum Nx value of 200 recommended
-  - Has not been tested for Nx values over 500
+  - Minimum Nx value of 300 recommended
+  - Has not been tested for Nx values over 800
 - **potential_type**:
   - `1` = Harmonic Oscillator (`V(x) = x²`)
   - `2` = Infinite Square Well
