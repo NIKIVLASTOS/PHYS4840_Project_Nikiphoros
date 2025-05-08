@@ -376,6 +376,7 @@ The current version expects `input.txt` to follow a strict format (comment lines
 > **Note**: The program does not currently validate user input, so malformed or missing entries in `input.txt` may result in runtime errors. Future versions will include error checking and improved flexibility.
 
 ### Example Valid Input
+This Input file `input.txt` as well as the three output plots can be found in the TEST directory in this repository.
 
 ```text
 ! xmin xmax Nx
