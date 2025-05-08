@@ -99,6 +99,8 @@ This module defines a suite of potential energy functions used in constructing t
 
 Each function is pure and independent, enabling easy extension of the module to support additional potentials. These functions are called in the main solver to construct the potential energy term $V(x_i)$ at each grid point.
 
+> **Disclaimer on Potentials **:
+> The boundary conditions are not fully functional. An example of this can be found if you set `V0` to 5 and `num_eigenstates` to >10. The wave functions with energies above the potential barriers will appear to behave as though they have energies below the potential. This will hopefully be updated in the future.
 > **Disclaimer on Potentials 4–6**:  
 > The Step Potential, Stepped Trap, and Step Barrier are included as test cases to explore non-smooth or discontinuous potentials. However, these are **simplified models** and may not fully reproduce the exact boundary behavior expected in quantum mechanical systems, especially in finite domains. For example, reflection and transmission in the step potential or tunneling in the step barrier may not align exactly with textbook expectations due to domain truncation, numerical resolution, and hard cutoff approximations (e.g., using large but finite wall values like `1e6`). These are useful for qualitative insight but should not be considered quantitatively exact.
 
