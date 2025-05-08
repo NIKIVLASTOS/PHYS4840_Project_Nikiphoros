@@ -425,18 +425,13 @@ Here is an example plot of computed wavefunctions overlaid with the potential $V
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/NIKIVLASTOS/PHYS4840.git
+git clone https://github.com/NIKIVLASTOS/PHYS4840_Project_Nikiphoros.git
 ```
-### 2. Navigate to the directory
-
-```bash
-cd PHYS4840/PROJECT
-```
-### 3.  Install Python dependencies
+### 2.  Install Python dependencies
 ```bash
 pip install numpy matplotlib
 ```
-### 4. Edit input file
+### 3. Edit input file
 Open the input file
 ```bash
 vi input.txt
@@ -446,12 +441,12 @@ edit file as desired then save and exit:
 ```bash
 :wq
 ```
-### 5.  Compile the solver
+### 4.  Compile the solver
 Use the provided `makefile` to compile the Fortran source:
 ```bash
 make
 ```
-### 6. Run the simulation and generate plots
+### 5. Run the simulation and generate plots
 ```bash
 make run
 ```
