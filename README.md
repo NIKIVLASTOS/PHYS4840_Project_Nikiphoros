@@ -429,10 +429,11 @@ Here is an example plot of computed wavefunctions overlaid with the potential $V
 git clone https://github.com/NIKIVLASTOS/PHYS4840_Project_Nikiphoros.git
 ```
 ### 2.  Install Python dependencies
+If needed install python dependencies to device
 ```bash
 pip install numpy matplotlib
 ```
-### 3.  Install Python dependencies
+### 3.  Enter the project directory 
 ```bash
 cd path/to/PHYS4840_Project_Nikiphoros
 ```
