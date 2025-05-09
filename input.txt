@@ -5,8 +5,8 @@
 1
 
 ! num_eigenstates
-4
+5
 
 ! V0 (only used if potential_type == 3)
-10.0
+0.0
 
