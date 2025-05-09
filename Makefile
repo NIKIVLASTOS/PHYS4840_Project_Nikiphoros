@@ -19,6 +19,6 @@ run: $(EXEC)                                                        # run  progr
 	./$(EXEC)                                                       # Execute fortran program
 	python3 plot_results.py                                         # run the Python script to plot results
 
-clean:                                                              # to clean up build artifacts
+clean:                                                              # to clean up build for a new run
 	rm -f $(EXEC) *.o *.mod                                         # Remove executable, object files, and module files
 	rm -rf __pycache__ plots                                       # Remove python cache and plots folder
