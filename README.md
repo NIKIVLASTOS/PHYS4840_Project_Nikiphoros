@@ -432,7 +432,11 @@ git clone https://github.com/NIKIVLASTOS/PHYS4840_Project_Nikiphoros.git
 ```bash
 pip install numpy matplotlib
 ```
-### 3. Edit input file
+### 3.  Install Python dependencies
+```bash
+cd path/to/PHYS4840_Project_Nikiphoros
+```
+### 4. Edit input file
 Open the input file
 ```bash
 vi input.txt
@@ -442,12 +446,12 @@ edit file as desired then save and exit:
 ```bash
 :wq
 ```
-### 4.  Compile the solver
+### 5.  Compile the solver
 Use the provided `makefile` to compile the Fortran source:
 ```bash
 make
 ```
-### 5. Run the simulation and generate plots
+### 6. Run the simulation and generate plots
 ```bash
 make run
 ```
