@@ -302,7 +302,7 @@ The program reads simulation parameters from an input file named `input.txt`. Th
 
 ```txt
 ! xmin xmax Nx
--5 5 305
+-10 10 305
 
 ! potential_type
 1
