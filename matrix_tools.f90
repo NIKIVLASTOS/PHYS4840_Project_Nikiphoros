@@ -1,6 +1,6 @@
-!==============================                                                  
+!==============                                                
 ! File: matrix_tools.f90                              
-!==============================
+!===============
 
 module matrix_tools                                                              ! define module  "matrix tools"
   implicit none                                                                  ! require all variables to be explicitly declared (Nothing is implicit)
