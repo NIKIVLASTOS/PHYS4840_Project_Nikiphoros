@@ -302,16 +302,16 @@ The program reads simulation parameters from an input file named `input.txt`. Th
 
 ```txt
 ! xmin xmax Nx
--5 5 3000
+-5 5 305
 
 ! potential_type
 1
 
 ! num_eigenstates
-4
+5
 
 ! V0 (only used if potential_type == 3)
-100.0
+0.0
 ```
 
 ### Field Descriptions
