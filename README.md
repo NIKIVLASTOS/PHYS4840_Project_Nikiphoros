@@ -159,7 +159,7 @@ This subroutine performs normalization on a 2D array of wavefunctions, where eac
   - The L2 norm is computed using the rectangular (midpoint) rule:
 
     $$
-    \\mathrm{norm} = \\displaystyle\\sqrt{\\sum_i \\psi_n(x_i)^2 \\cdot \\Delta x}
+    \mathrm{norm} = \sqrt{\sum_i \psi_n(x_i)^2 \cdot \Delta x}
     $$
 
 
