@@ -1,27 +1,27 @@
-!==============================                                       
+!========================                                      
 ! File: potential_functions.f90                                      
-!==============================                                       
+!====================                                      
 
-module potential_functions                                            ! Define a module for 'potential energy functions'
-  implicit none                                                       ! Require all variables to be explicitly declared (Nothing is implicit)
-contains                                                              ! Begin module procedures
+module potential_functions                                            ! module for 'potential energy functions'
+  implicit none                                                       ! require all variables to be explicitly declared (Nothing is implicit)
+contains                                                              ! Begin module
 
   function harmonic_oscillator(x) result(v)                           ! This is the Harmonic oscillator potential: V(x) = (1/2) * m * w² * x²
     implicit none                                                     ! No implicit 
-    real(8), intent(in) :: x                                          ! Input: position x
-    real(8) :: v                                                      ! Output: potential energy (I chose to denote with v) at x
+    real(8), intent(in) :: x                                          ! Input  position x
+    real(8) :: v                                                      ! Output  potential energy (I chose to denote with v) at x
     real(8), parameter :: m = 1.0d0, omega = 1.0d0                    ! Parameters: mass and angular frequency (natural units)
     v = 0.5d0 * m * omega**2 * x**2                                   ! Compute V(x) = 1/2 * m * w² * x²
   end function harmonic_oscillator                                    ! End function
 
-  function infinite_square_well(x, xmin, xmax) result(v)
+  function infinite_square_well(x, xmin, xmax) result(v)              ! Infinit square well potnetial
     implicit none
-    real(8), intent(in) :: x, xmin, xmax
+    real(8), intent(in) :: x, xmin, xmax                              ! Input xmax xmin and x
     real(8) :: v
-    real(8), parameter :: V_INF = 1.0d20  ! Use a very large value to simulate infinite wall
+    real(8), parameter :: V_INF = 1.0d20                              ! Use a very large value to simulate infinite wall
     real(8) :: x1, x2
 
-    ! Shift edges inward by 1 unit
+                                                                      ! Shift edges inward by 1 unit
     x1 = xmin + 1.0d0
     x2 = xmax - 1.0d0
 
@@ -34,13 +34,13 @@ contains                                                              ! Begin mo
 
 
 
-  function finite_square_well(x, xmin, xmax, V0) result(v)
+  function finite_square_well(x, xmin, xmax, V0) result(v)            ! Finite Square well
     implicit none
     real(8), intent(in) :: x, xmin, xmax, V0
     real(8) :: v
     real(8) :: wall_left, wall_right
 
-    wall_left = xmin + 2.0d0
+    wall_left = xmin + 2.0d0                                          ! Shift edges inward by 2 units
     wall_right = xmax - 2.0d0
 
     if (x < wall_left .or. x > wall_right) then
@@ -50,20 +50,20 @@ contains                                                              ! Begin mo
     end if
   end function finite_square_well
 
-  function step_potential(x) result(v)
+  function step_potential(x) result(v)                                  ! Step potential
     implicit none
     real(8), intent(in) :: x
     real(8) :: v
     if (x < 0.0d0) then
       v = 0.0d0
-    else
-      v = 5.0d0
+    else  
+      v = 5.0d0                                                      ! At/after x >= 0 make the potential 5
     end if
   end function step_potential
 
   function stepped_trap(x) result(v)                                         ! Step with right 'wall'
     implicit none
-    real(8), intent(in) :: x                                                 ! Position
+    real(8), intent(in) :: x                                                 ! position
     real(8) :: v                                                             ! Potential value
     if (x < 0.0d0) then
       v = 0.0d0                                                              ! Flat potential on left
@@ -74,19 +74,19 @@ contains                                                              ! Begin mo
     end if
   end function stepped_trap
 
-  real(8) function step_barrier(x)
+  real(8) function step_barrier(x)                                      ! Step barrier Potential
     implicit none
     real(8), intent(in) :: x
 
-    if (x < 0.0d0) then
+    if (x < 0.0d0) then                                              ! Potential is 0 when x is less than zero
       step_barrier = 0.0d0
-    else if (x <= 5.0d0) then
+    else if (x <= 5.0d0) then                                        ! between 0 and 5 potential if 5
       step_barrier = 5.0d0
     else
-      step_barrier = 0.0d0
+      step_barrier = 0.0d0                                          ! After x = 5 potential is back to 0
     end if
   end function step_barrier
 
 
 
-end module potential_functions                                        ! End of whole module
+end module potential_functions                                        ! End of whole program
